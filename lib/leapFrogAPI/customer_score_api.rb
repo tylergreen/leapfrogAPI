@@ -1,26 +1,19 @@
 require 'rest_client'
+require 'json'
 
-module CustomerScoreAPI
-  def self.uri(customer)
-    uri = URI('http://internal.leapfrogonline.com/customer_scoring')
-    params = {
-      income: customer.income,
-      zipcode: customer.zipcode,
-      age: customer.age
-    }
-    uri.query = URI.encode_www_form(params)
-    uri
+class CustomerScoreAPI
+  def initialize(url)
+    @url = url
   end
 
-  def self.score(customer)
-    url = "http://internal.leapfrogonline.com/customer_scoring"
-    resp = RestClient.get(url, {:params => 
+  # get a score for a given customer object 
+  def score(customer)
+    resp = RestClient.get(@url, {:params => 
                             { income: customer.income,
                               zipcode: customer.zipcode,
                               age: customer.age
                             } } )
     JSON.parse(resp.body)
   end
-
 
 end
