@@ -1,5 +1,6 @@
 require "leapFrogAPI/version"
 
 module LeapFrogAPI
-  # Your code goes here...
+  require 'leapFrogAPI/customer'
+  require 'leapFrogAPI/customer_score_api'
 end
