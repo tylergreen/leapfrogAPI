@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = LeapFrogAPI::VERSION
   spec.authors       = ["Tyler Green"]
   spec.email         = ["tyler.green2@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Interface to customer scoring api}
+  spec.summary       = %q{Interface to customer scoring api}
   spec.homepage      = ""
   spec.license       = "MIT"
 

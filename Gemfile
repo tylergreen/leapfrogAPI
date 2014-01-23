@@ -6,7 +6,6 @@ ruby '2.0.0'
 gemspec
 
 gem 'rest_client'
-
-group :test do
+gem 'json'
 gem 'webmock'
-end
+
